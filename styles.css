@@ -1,0 +1,85 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html body {
+  background-color: #8238D0;
+  color: #F7FB6C;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  overflow: hidden;
+  /* font-weight: 300; */
+  /* font-style: normal; */
+
+  /* font-size: 1em; */
+}
+
+.hide {
+  display: none;
+}
+
+.myDIV:hover+.hide {
+  /* padding: 100px; */
+  display: block;
+  color: white;
+  cursor: pointer;
+}
+
+#grad1 {
+  height: 100vh;
+  /* Set container to full viewport height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #8238D0;
+  /* For browsers that do not support gradients */
+  background-image: linear-gradient(180deg, #F6F66C, #E7B176, #DB3AE5, #8238D0);
+}
+
+
+h1 {
+  /* color: white; */
+  /* font-size: 1.5em; */
+  /* font-weight: bold; */
+  /* text-decoration: underline; */
+}
+
+
+
+
+
+h2 {
+  color: #7C3DD3;
+  /* font-size: 1.2em; */
+  text-decoration-line: underline;
+  text-decoration-style: dotted;
+  text-decoration-color: #47179A;
+}
+
+h3 {
+  color: #F7FB6C;
+  /* color: white; */
+  /* font-size: 1.2em; */
+}
+
+p {
+  color: #F7FB6C;
+  /* font-size: 0.8em; */
+  /* line-height: 1.5; */
+}
+
+a {
+  color: white;
+  /* color: green; */
+  text-decoration: none;
+}
+
+ul {
+  color: #F7FB6C;
+  /* font-size: 0.8em; */
+  /* list-style-type: none; */
+  list-style-position: inside;
+  /* padding: 0; */
+}
