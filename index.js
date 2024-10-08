@@ -27,6 +27,6 @@ document.getElementById("danilynx").innerHTML = `
     <p><a href="https://www.linkedin.com/in/danilynx/">Contact for your project</a></p>
   </section>
   <footer>
-    <a href="/home-page.html">Home Page</a>
+    
   </footer>
 `;
