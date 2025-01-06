@@ -1,3 +1,12 @@
+:root {
+  --light-color: #F6F66C;
+  --accent-one-color: #E7B176;
+  --accent-two-color: #DB3AE5;
+  --dark-color: #8238D0;
+  --black-color: #47179A;
+  --white: white;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -5,15 +14,11 @@
 }
 
 html body {
-  background-color: #8238D0;
-  color: #F7FB6C;
+  background-color: var(--dark-color);
+  color: var(--light-color);
   text-align: center;
   font-family: "Roboto", sans-serif;
   overflow: hidden;
-  /* font-weight: 300; */
-  /* font-style: normal; */
-
-  /* font-size: 1em; */
 }
 
 .hide {
@@ -21,65 +26,42 @@ html body {
 }
 
 .myDIV:hover+.hide {
-  /* padding: 100px; */
   display: block;
-  color: white;
+  color: var(--white);
   cursor: pointer;
 }
 
-#grad1 {
+#gradient {
   height: 100vh;
-  /* Set container to full viewport height */
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #8238D0;
-  /* For browsers that do not support gradients */
-  background-image: linear-gradient(180deg, #F6F66C, #E7B176, #DB3AE5, #8238D0);
+  background-color: var(--dark-color);
+  background-image: linear-gradient(180deg, var(--light-color), var(--accent-one-color), var(--accent-two-color), var(--dark-color));
 }
 
-
-h1 {
-  /* color: white; */
-  /* font-size: 1.5em; */
-  /* font-weight: bold; */
-  /* text-decoration: underline; */
-}
-
-
-
-
-
+h1,
 h2 {
-  color: #7C3DD3;
-  /* font-size: 1.2em; */
+  color: var(--dark-color);
   text-decoration-line: underline;
   text-decoration-style: dotted;
-  text-decoration-color: #47179A;
+  text-decoration-color: var(--black-color);
 }
 
 h3 {
-  color: #F7FB6C;
-  /* color: white; */
-  /* font-size: 1.2em; */
+  color: var(--dark-color);
+}
+
+h3,
+h4 {
+  font-weight: normal;
 }
 
 p {
-  color: #F7FB6C;
-  /* font-size: 0.8em; */
-  /* line-height: 1.5; */
+  color: var(--light-color);
 }
 
 a {
-  color: white;
-  /* color: green; */
+  color: var(--white);
   text-decoration: none;
-}
-
-ul {
-  color: #F7FB6C;
-  /* font-size: 0.8em; */
-  /* list-style-type: none; */
-  list-style-position: inside;
-  /* padding: 0; */
 }
