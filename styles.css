@@ -1,67 +1,155 @@
 :root {
-  --light-color: #F6F66C;
-  --accent-one-color: #E7B176;
-  --accent-two-color: #DB3AE5;
-  --dark-color: #8238D0;
-  --black-color: #47179A;
-  --white: white;
+  --white: #fff;
+  --light: #E1E1FF;
+  --accent-one: #5598FE;
+  --accent-two: #1645BD;
+  --dark: #0C2A79;
+  --black: #010212;
+  --font-mono: "Roboto Mono", ui-monospace, monospace;
 }
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-html body {
-  background-color: var(--dark-color);
-  color: var(--light-color);
+body {
+  color: var(--light);
   text-align: center;
-  font-family: "Roboto", sans-serif;
+  font-family: var(--font-mono);
   overflow: hidden;
 }
 
-.hide {
-  display: none;
+mark {
+  background-color: var(--accent-two);
+  color: var(--light);
 }
 
-.myDIV:hover+.hide {
-  display: block;
-  color: var(--white);
-  cursor: pointer;
+sub,
+sup {
+  color: var(--accent-two);
 }
 
-#gradient {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: var(--dark-color);
-  background-image: linear-gradient(180deg, var(--light-color), var(--accent-one-color), var(--accent-two-color), var(--dark-color));
+h1 {
+  color: var(--accent-one);
 }
 
-h1,
-h2 {
-  color: var(--dark-color);
-  text-decoration-line: underline;
-  text-decoration-style: dotted;
-  text-decoration-color: var(--black-color);
-}
-
-h3 {
-  color: var(--dark-color);
-}
-
+h2,
 h3,
 h4 {
+  font-size: 16px;
   font-weight: normal;
+  line-height: 1;
 }
 
-p {
-  color: var(--light-color);
+h6 {
+  color: var(--dark);
+}
+
+h2 span {
+  display: inline-block;
+}
+
+h2 span::before {
+  content: "\A";
+  white-space: pre;
 }
 
 a {
-  color: var(--white);
-  text-decoration: none;
+  color: var(--accent-one);
+}
+
+a:hover {
+  background-color: var(--light);
+}
+
+#gradient {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background: linear-gradient(180deg, var(--black), var(--dark), var(--accent-two));
+  cursor: default;
+}
+
+#danilynx>a:hover {
+  background-color: transparent;
+}
+
+#ad {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0;
+  background: linear-gradient(to right,
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, .05),
+      rgba(0, 0, 0, .5),
+      rgba(0, 0, 0, 1));
+}
+
+@keyframes lighting {
+  from {
+    border: 2px solid var(--dark);
+  }
+
+  to {
+    border: 2px solid var(--black);
+  }
+}
+
+.logo {
+  /* width: 100px;
+  height: 100px;
+  background-color: red; */
+  /* transition: transform 1.2s ease-out; */
+}
+
+.target {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  position: absolute;
+  transition: transform 0.2s ease-out;
+}
+
+.pointer {
+  pointer-events: none;
+  position: absolute;
+  top: -300px;
+  left: -300px;
+  min-width: 4px;
+  min-height: 4px;
+  border-radius: 2px;
+  background-color: var(--light);
+}
+
+.circle {
+  pointer-events: none;
+  position: absolute;
+  top: -300px;
+  left: -300px;
+  width: 36px;
+  height: 36px;
+  border-radius: 16px;
+  animation: brighting 4s ease-in-out infinite;
+}
+
+@keyframes brighting {
+  from {
+    border: 3px solid var(--accent-one);
+    transform: rotate(90deg);
+  }
+
+  to {
+    border: 3px solid var(--accent-two);
+    transform: rotate(0deg);
+  }
+}
+
+.content {
+  padding: 10px 15px;
+}
+
+@media (max-width: 435px) {
+
+  p,
+  h2 {
+    font-size: 14px;
+  }
 }
